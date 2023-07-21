@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Lista from "./Lista";
-import Detalle from "./Detalle"
+import Loading from "./Loading";
 
 
 function RickandMorty () {
@@ -29,10 +29,8 @@ function getUrlToFetch() {
 
 if (isLoading) {
    return (
-    <div>
-        <h1>Cargando...</h1>
-    </div>
-); 
+    <Loading />
+  );
 }
 
 return (

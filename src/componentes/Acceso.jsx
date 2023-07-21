@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import './Acceso.css';
+import titulo from "../Imagenes/titulo.png";
+import './Acceso.css';
 
 const Acceso = ({ setLogIn }) => {
     const user = "UnUser";
@@ -15,14 +16,16 @@ const Acceso = ({ setLogIn }) => {
         event.preventDefault();
         console.log("loging")
         if (usuario === user && pass === password) {
-            setLogIn(true)
+            setLogIn(true);
+            localStorage.setItem("user", usuario);
+            localStorage.setItem("password", pass);
             navigate('/lista');
         }
     }
     return (
         <div className="acceso">
-            <h1>Personajes Rick and Morty</h1>
             <form onSubmit={handleSubmit} method="POST">
+                <h1><img src={titulo} /></h1>
                 <div>
                     <label htmlFor="Usuario">Usuario</label>
                     <input type="text" placeholder="Escribe tu usuario" name="usuario" id="Usuario" required="required" value={usuario} onChange={e => setUsuario(e.target.value)} />
@@ -39,3 +42,4 @@ const Acceso = ({ setLogIn }) => {
 }
 
 export default Acceso;
+//

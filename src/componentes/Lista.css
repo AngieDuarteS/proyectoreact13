@@ -1,0 +1,157 @@
+.lista {
+    background-image: url(../Imagenes/Rick\ &\ Morty.png);
+    min-height: 100vh;
+    padding: 45px 40px 10px;
+}
+
+.filtro {
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    font-family: 'Tektur', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(245, 248, 246);
+    text-shadow: -1px 2px 5px rgba(102, 223, 3, 0.925);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid aqua;
+    background-color: rgba(0, 26, 255, 0.384);
+
+}
+
+.filtro .opciones {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Tektur', cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 3px 2px 5px rgba(39, 0, 214, 0.884);
+    text-align: center;
+    width: 125px;
+    height: 35px;
+    border: 2px outset chartreuse;
+    border-radius: 3px;
+    background-color: rgba(45, 159, 252, 0.548);
+    cursor: pointer;
+}
+
+.filtro #filtrar {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Tektur', cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 3px 2px 5px rgba(27, 0, 145, 0.911);
+    text-align: center;
+    width: 70px;
+    height: 35px;
+    border: 2px outset chartreuse;
+    border-radius: 3px;
+    background-color: rgba(45, 159, 252, 0.548);
+    cursor: pointer;
+}
+
+.personajes {
+    display: flex;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.personaje {
+    display: grid;
+    margin: 20px 65px;
+    grid-template-columns: 220px 175px;
+    grid-template-rows: repeat(4, 25% [row-start]);
+    border: 3px solid rgb(9, 255, 0);
+    border-radius: 7px;
+    border-style: groove;
+    background-color: rgba(147, 182, 248, 0.473);
+    box-shadow: 3px 2px 5px rgba(9, 255, 0, 0.596);
+    cursor: pointer;
+
+}
+
+.personajes .personaje img {
+    width: 200px;
+    padding: 15px 15px;
+    max-width: 200px;
+    grid-row: 1 / span 4;
+    border-radius: 20px;
+}
+
+.personajes .personaje h3 {
+    font-family: 'Tektur', cursive;
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 1px rgba(0, 183, 255, 0.692);
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-row: 1 /2;
+    align-self: stretch;
+}
+
+.personajes .personaje h6 {
+    font-family: 'Changa', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 1px rgba(0, 183, 255, 0.692);
+    width: 100px;
+    margin: 20px 10px;
+    grid-row: 3;
+    align-self: end;
+}
+
+@media only screen and (max-width:400px) {
+    .lista {
+       background-size: contain;
+       padding: 40px 40px 5px;
+    }
+    .filtro {
+        padding: 15px 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .filtro .opciones {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .personaje {
+        display: grid;
+        grid-template-columns: 115px 135px;
+        grid-template-rows: repeat(4, 25% [row-start]);
+    }
+    .personajes .personaje img {
+        width: 100px;
+        padding: 15px 15px;
+        max-width: 100px;
+        grid-row: 1 / span 4;
+        border-radius: 20px;
+    
+    }
+    
+    .personajes .personaje h3 {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 10px;
+        grid-row: 1 /2;
+        align-self: stretch;
+    }
+    
+    .personajes .personaje h6 {
+        font-size: 11px;
+        width: 100px;
+        margin: 10px 20px;
+        grid-row: 3;
+        align-self: end;
+    }
+}

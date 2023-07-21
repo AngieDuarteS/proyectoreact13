@@ -1,0 +1,109 @@
+.acceso {
+    background-image: url(../Imagenes/Rick\ &\ Morty.png);
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+
+}
+
+.acceso h1 {
+    margin: auto;
+}
+
+.acceso h1 img {
+    padding: 80px 35px 15px;
+    width: 400px;
+    height: 200px;
+}
+
+.acceso form {
+    font-family: 'Tektur', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 254, 254);
+    text-shadow: 2px 3px rgba(3, 247, 255, 0.685);
+}
+
+.acceso form #Usuario {
+    padding: 0;
+    margin: 20px;
+    font-family: 'Changa', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(1, 4, 185);
+    background-color: rgba(255, 255, 255, 0.527);
+    border-style: double;
+    border-color: rgb(80, 253, 0);
+    text-shadow: 3px 1px rgba(11, 250, 23, 0.979);
+}
+
+.acceso form #Contraseña {
+    margin-left: 20px;
+    margin-right: 75px;
+    margin-bottom: 20px;
+    font-family: 'Changa', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(1, 4, 185);
+    background-color: rgba(255, 255, 255, 0.527);
+    border-style: double;
+    border-color: rgb(80, 253, 0);
+    text-shadow: 3px 1px rgba(11, 250, 23, 0.979);
+}
+
+.acceso form #Entrar {
+    margin: 20px;
+    padding: 6px;
+    font-family: 'Tektur', cursive;
+    font-size: 25px;
+    color: rgb(235, 226, 226);
+    background-color: rgba(0, 36, 196, 0.623);
+    border-style: outset;
+    border-radius: 10px;
+    border: 3px outset rgb(21, 255, 0);
+    box-shadow: 3px 2px rgba(19, 245, 38, 0.384);
+    text-shadow: 2px 2px rgba(9, 165, 255, 0.87);
+}
+
+.acceso form #Entrar:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(80, 253, 0);
+    text-shadow: 2px 2px rgba(15, 137, 219, 0.87);
+    border: 3px outset rgb(0, 174, 255);
+}
+
+@media only screen and (max-width:400px) {
+    .acceso {
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center;
+    }
+
+    .acceso h1 img {
+        width: 250px;
+        height: 100px;
+    }
+
+    .acceso form {
+        font-size: 20px;
+    }
+
+    .acceso form #Usuario {
+        margin: 10px;
+        font-size: 17px;
+    }
+
+    .acceso form #Contraseña {
+        margin-top: 12px;
+        margin-left: 12px;
+        margin-bottom: 12px;
+        margin-right: 10px;
+        font-size: 17px;
+    }
+
+    .acceso form #Entrar {
+        margin: 35px;
+        font-size: 22px;
+    }
+}

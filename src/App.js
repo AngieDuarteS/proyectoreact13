@@ -1,14 +1,31 @@
 import './App.css';
 import Acceso from './componentes/Acceso';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RickandMorty from './componentes/RickandMorty';
 import Detalle from './componentes/Detalle';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import RutaPrivada from './componentes/RutaPrivada';
 
 
 function App() {
   const [logged, setLogged] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = "UnUser";
+    const password = "ContrasenaSegura123";
+    let usuario = localStorage.getItem("user");
+    let pass = localStorage.getItem("password");
+    if (usuario === user && pass === password) {
+      logUser();
+    }
+  }, []);
+
+  const logUser = () => {
+      setLogged(true)
+      navigate('/lista');
+  }
+
   return (
     <div className="App">
       <Routes>
@@ -21,33 +38,3 @@ function App() {
   );
 }
 export default App;
-
-/**/
-
-/*
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
-    </div>
-  );
-}
-
-export default App;
-
-<img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>*/

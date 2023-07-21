@@ -1,0 +1,97 @@
+.detalle{
+    background-image: url(../Imagenes/Rick\ &\ Morty.png);
+    min-height: 100vh;
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caja h1 {
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Tektur', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    text-shadow: 3px 3px 6px rgba(72, 255, 0, 0.89);
+}
+.contenido {
+    display: inline-flex;
+    justify-content: center;
+    border: 3px solid rgb(21, 255, 0);
+    border-radius: 10px;
+    border-style:double;
+    box-shadow: 2px -3px 5px rgba(22, 248, 2, 0.76);
+    background-color: rgba(0, 47, 255, 0.212);
+}
+
+.contenido img{
+    height: min-content;
+    margin: 50px 30px;
+    border-radius: 13px;
+    box-shadow: -4px 1px 5px rgba(46, 252, 5, 0.651);
+}
+.contenido table{
+    margin: 20px 10px;
+}
+
+.contenido table h3{
+    font-family: 'Tektur', cursive;
+    font-size: 20px;
+    color:white;
+    text-shadow: 3px -2px 5px rgba(59, 240, 4, 0.774);
+    margin: 0;
+    width: 150px;
+}
+.contenido table h5 {
+    font-family: 'Tektur', cursive;
+    font-size: 20px;
+    color:white;
+    text-shadow: 3px -2px 5px rgba(17, 247, 17, 0.815);
+    margin: 0;
+}
+.contenido table p {
+    font-family: 'Changa', sans-serif;
+    font-size: 20px;
+    color:white;
+    text-shadow: 2px 1px 5px rgba(30, 6, 248, 0.822);
+    width: 300px;
+    margin: 0;
+}
+@media only screen and (max-width:400px) {
+    .detalle{
+        min-height: 100vh;
+        background-size: contain;
+    }
+    .caja h1 {
+        margin: 0;
+        padding: 30px;
+        font-size: 30px;
+    }
+      
+    .contenido img{
+        width: 125px;
+        margin: 55px 10px;
+    }
+    .contenido table{
+        margin: 6px 7px 6px 0px;
+    }
+    
+    .contenido table h3{
+        font-size: 10px;
+        margin: 0;
+        width: 20px;
+    }
+    .contenido table h5 {
+        font-size: 10px;
+        margin: 0;
+    }
+    .contenido table p {
+        font-size: 10px;
+        width: 75px;
+        margin: 0;
+    }
+
+}
